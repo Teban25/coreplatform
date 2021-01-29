@@ -17,11 +17,12 @@ public class ThreadsApp {
 		
 		operation.start();
 		
+		System.out.println(addAmount);
 		
 		/*
 		 * Basic example using implements Runnable interface
 		 */
-		addAmount = account.getAmount() + 250;
+		addAmount = addAmount + 250;
 		operation = new Thread(new BasicOperationsAccountRunnable(account, addAmount));
 		operation.start();
 		
